@@ -1,0 +1,135 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+:root {
+  --color-primary: hsl(47, 88%, 63%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-gray-500: hsl(0, 0%, 42%);
+  --color-gray-950: hsl(0, 0%, 7%);
+
+  /* Sizes */
+  --size-50: calc(var(--size-100) * 0.5);
+  --size-100: 8px;
+  --size-150: calc(var(--size-100) * 1.5);
+  /* --size-200: calc(var(--size-100) * 2); */
+  --size-300: calc(var(--size-100) * 3);
+
+  /* Shadows */
+  --shadow-main: 8px 8px 0px 0px var(--color-gray-950);
+
+  /* Borders */
+  --radius-40: 4px;
+  --radius-100: 10px;
+  --radius-200: 20px;
+
+  /* Typography */
+  font-size: 16px;
+  font-family: "Figtree", sans-serif;
+  line-height: 150%;
+}
+
+body {
+  width: 100svw;
+  height: 100svh;
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  padding: var(--size-300);
+  font-weight: 500;
+  color: var(--color-gray-950);
+}
+
+.main-container {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.blog-author {
+  display: flex;
+  gap: var(--size-150);
+  align-items: center;
+  img {
+    width: 32px;
+    width: 32px;
+  }
+  a {
+    display: flex;
+  }
+  p {
+    font-weight: 800;
+    font-size: 0.875rem;
+  }
+}
+.chips {
+  display: flex;
+  gap: var(--size-100);
+}
+.chip {
+  padding: var(--size-50) var(--size-150);
+  background-color: var(--color-primary);
+  width: fit-content;
+  border-radius: var(--radius-40);
+  font-weight: 800;
+  font-size: 0.875rem;
+}
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-300);
+  background-color: var(--color-white);
+  width: 100%;
+  max-width: 336px;
+  padding: var(--size-300);
+  border-radius: var(--radius-200);
+  border: 1px solid var(--color-gray-950);
+  box-shadow: var(--shadow-main);
+  .blog-date {
+    font-size: 0.875rem;
+  }
+  .blog-card-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-150);
+    .blog-description {
+      color: var(--color-gray-500);
+    }
+  }
+  .blog-thumbnail {
+    display: flex;
+  }
+  .blog-title {
+    h5 {
+      font-size: 1.5rem;
+    }
+  }
+  .blog-title:hover {
+    cursor: pointer;
+    color: var(--color-primary);
+  }
+  .blog-thumbnail img {
+    width: 100%;
+    border-radius: var(--radius-100);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    font-size: 14px;
+  }
+
+  .blog-author {
+    p {
+      font-size: 1rem;
+    }
+  }
+}
