@@ -88,7 +88,7 @@ body {
   gap: var(--size-300);
   background-color: var(--color-white);
   width: 100%;
-  max-width: 336px;
+  max-width: 384px;
   padding: var(--size-300);
   border-radius: var(--radius-200);
   border: 1px solid var(--color-gray-950);
