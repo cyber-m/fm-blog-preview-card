@@ -4,6 +4,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  line-height: 150%;
 }
 
 a {
@@ -20,7 +21,6 @@ a {
   --size-50: calc(var(--size-100) * 0.5);
   --size-100: 8px;
   --size-150: calc(var(--size-100) * 1.5);
-  /* --size-200: calc(var(--size-100) * 2); */
   --size-300: calc(var(--size-100) * 3);
 
   /* Shadows */
@@ -34,7 +34,7 @@ a {
   /* Typography */
   font-size: clamp(14px, 3.2vw, 16px);
   font-family: "Figtree", sans-serif;
-  line-height: 150%;
+  color: var(--color-gray-950);
 }
 
 body {
@@ -45,7 +45,6 @@ body {
   flex-direction: column;
   padding: var(--size-300);
   font-weight: 500;
-  color: var(--color-gray-950);
 }
 
 .main-container {
@@ -60,7 +59,7 @@ body {
   align-items: center;
   img {
     width: 32px;
-    width: 32px;
+    height: 32px;
   }
   a {
     display: flex;
